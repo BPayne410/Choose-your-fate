@@ -1,0 +1,187 @@
+print('''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/_____ /
+*******************************************************************************
+''')
+print("Welcome to Treasure Island!")
+print("Your mission is to make the correct choices that will lead you to the treasure at the end of the game. Good luck!") 
+
+#https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Treasure%20Island%20Conditional.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1oDe4ehjWZipYRsVfeAx2HyB7LCQ8_Fvi%26export%3Ddownload
+
+#Write your code below this line 👇
+
+choice1 = input("You begin your journey at a fork in the road. taking the right path seems to lead you into a thick jungle and taking the left path takes you around the outside of the jungle. Which do you choose?\n Type 'left' or 'right': ")
+lowchoice1 = choice1.lower()
+if lowchoice1 == "left":
+  print("Good thinking! Walking through the jungle seems dangerous")
+  choice2 = input("As you walk down the path around the jungle, you come up on a decently sized river. The only way forward is to cross the river. Do you swim across or do you build a raft out of surrounding supplies and navigate across?\n Type 'build raft' or 'swim': ")
+  lowchoice2 = choice2.lower()
+  if lowchoice2 == "build raft":
+    print("Great choice! You gather the supplies, build your raft and safely make it to the other side")
+    choice3 = input("Once you reach the other side, you travel a bit further down the path until you see an opening in the jungle where there is a wide path leading to a temple. Do you follow this path and enter the temple?\n Type 'yes' or 'no': ")
+    lowchoice3 = choice3.lower()
+    if lowchoice3 == "yes":
+      print("Yes, I agree. This particular path into the jungle looked well traveled and safe. Entering the temple was a little risky, but seems like a good place to look for treasure.")
+      choice4 = input(''' 
+                          ,---.
+                         /    |
+                        /     |
+                       /      |
+                      /       |
+                 ___,'        |
+               <  -'          :
+                `-.__..--'``-,_\_
+                   |o/ ` :,.)_`>
+                   :/ `     ||/)
+                   (_.).__,-` ||
+                   /( `.``   `| :
+                   |'`-.)  `  ; ;
+                   | `       |-<
+                   |     `  |   `.
+   ,-_-..____     ||  `    :__..-'|
+  |,'-.__\\  ``-.| :`      ;       |
+  `\ `\  `\\  \ :  (   `  |  ,   `. |
+    \` \   \\   |  | `   :  :     .\ |
+     \ `\_  ))  :  ;     |  |      ): :
+    (`-.-'\ ||  |\ \   ` ;  ;       | |
+     \-_   `;;._   ( `  /  /_       | |
+      `-.-.// ,'`-._\__/_,'         ; |
+         \:: :     /     `     ,   /  |
+          || |    (        ,' /   /   |
+          ||                ,'   /    |
+You enter into the temple and immediately see three chests in the center of the room as well as an old man who has a long dark cloak. The man looks at you and says 'Welcome to my temple. I imagine you are here for my treasure. I will give it to you if you can answer me one riddle: Here is a box full of marbles, all but two are blue, all but two are green, and all but two are red. How many marbles are in the box? Choose the chest with the correct answer engraved on it and you can have the treasure inside.'\n You see that the first chest has the number 16 engraved, the second chest has a 6, and the final chest has a 3. Which chest do you choose?\n Type '16', '6', or '3' ''')
+      if choice4 == "16":
+        print("No, did you even try to figure the riddle out? The old man takes out a bow and arrow and shoots your eye out to have for breakfast. GAME OVER!")
+        print('''
+                (
+                 \ 
+                  )
+             ##-------->        
+                  )
+                 /
+                (
+''')
+      elif choice4 == "6":
+        print("No, I am not surprised. I did not think you were cut out for this sort of thing. It is a shame, though. So close and yet so far from the right answer. The old man laughs at your choice and pulls a lever, sending you into a pit where you will later become dinner for his pet megacerops (yes, they do still exist) - GAME OVER")
+        print('''
+             ,                    _.._     _         \  \ |  L
+          /(                 _-` _  `-`'` `._,-)    \  |/  L
+         |  `.              /   ( `._.-.    ',__    |  Y  /
+          \  /          __,/_   `-..\__,        `.  /  | /
+           //      _-'``                 `.   __  `'    /
+          ||   _..;_                       '.<@>\   <,  \>
+          \\__/                   |         _.-'`       /
+           `-/                 _   \    `--'     <-""";`
+            /                   `.  `.          _..._,'
+           |      |               \   `-._   _.'
+           |      \      /         \      `';\ 
+           |       \    /           \     -` /
+            \       |   |            `"\"`   |
+             \       \  \       -.     /      \ 
+              `._     |-.>,       `\_,-|       \ 
+                |`-.  /    `>-._    \  `.__     |
+                \     |    /    \   /      )   / 
+                 `-.  `-._<     >   \     /   <
+                   :_     \\   (     )    \    |
+                     |   __)\   `'._/      `''`
+                     `'-'\   \ 
+                          `'-'
+''')
+      elif choice4 == "3":
+        print("Congratulations! I always had faith in you. The wizzard shouts with glee as he watches the glow from all the treasure light up your face. As he does this, he begins to turn grey and crumbles to dust right before your eyes. A portal opens up and you instinctively step through holding your new treasure and walk through the portal. You are now back in your living room, significantly richer. The portal closes and it all seems like a strange fever dream. Great job! YOU WIN!!!")
+        print('''
+                   ______________________________________
+          ________|                                      |_______ 
+          \       |           CONGRATULATIONS            |      / 
+           \      |              WINNER!!!!              |     / 
+           /      |______________________________________|     \ 
+          /__________)                                (_________\ 
+''')
+      else:
+        print("please enter a valid value")
+    else:
+      print("I can understand why you decided not to go that route, however now you are destine to wander aimlessly until you die...")
+      print('''
+                            ,--.
+                           {    }
+                           K,   }
+                          /  ~Y`
+                     ,   /   /
+                    {_'-K.__/
+                      `/-.__L._
+                      /  ' /`\_}
+                     /  ' /
+             ____   /  ' /
+      ,-'~~~~    ~~/  ' /_
+    ,'             ``~~~  ',
+   (                        Y
+  {                         I
+ {      -                    `,
+ |       ',                   )
+ |        |   ,..__      __. Y
+ |    .,_./  Y ' / ^Y   J   )|
+ \           |' /   |   |   ||
+  \          L_/    . _ (_,.'(
+   \,   ,      ^^""' / |      )
+     \_  \          /,L]     /
+       '-_~-,       ` `   ./`
+          `'{_            )
+              ^^\..___,.--`
+''')
+      print ("You died of starvation as you are not very good at survival.. I don't even know why you are here... GAME OVER")
+  else:
+    print ("Seriously? You had the option to safely navigate across on a raft and you chose to swim? Did you really think nothing harmful lived in the water???")
+    print ('''  
+      ---_ ......._-_--.
+      (|  /      / /|  |)
+      /  /     .'  -=-'   `.
+     /  /    .'             )
+   _/  /   .'        _.)   /
+  / o   o        _.-' /  .'
+  \          _.-'    / .'*|
+   \______.-'//    .'.' |*|
+    \|  \ | //   .'.' _ |*|
+     `   \|//  .'.'_ _ _|*|
+      .  .// .'.' | _ _ |*|
+      \`-|\_/ /    | _ _ |*|
+       `/'\__/      |_ _ |*|
+      /^|            | _ _ |*
+     '  `             | _ _ |      
+                       |_
+                       ''')
+    print ("You were devoured by a sssneaky sssnake (sorry Andy...) -GAME OVER")
+else:
+  print("Are you crazy? Do you really think you can just waltz into a thick jungle and survive?")
+  print('''
+              (^\-==-/^)
+              >\\ == //<
+             :== q''p ==:      _,.---.._
+              .__ qp __. ~.-'"'\   |   |''..
+                 ^--^  | | \  \ |   , || /  '-. _______ .":
+                  ;| | |    | |     |/   .^-./ _)_)__))_).'
+                 / \ /      |       \ /  {/ /
+             ..-'\_ \   \       ,.--'\ _ ) _/
+            |  ,_../ \- |'---"""      '-/ \  |
+             --       | |            /_.   |-|
+                  __' | |   ._ ___   \  )  | |__
+          _,______'__ddd'_______._____""__ddd'_________
+                  __________,______.   _._
+''')
+  print("You were eaten by a jaguar, nice going. - GAME OVER")
